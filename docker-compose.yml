@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  telegram_notifier:
+    build: .
+    container_name: telegram_notifier
+    env_file: .env
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
